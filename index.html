@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>OOPs</title>
+<style>
+body {
+	font-family:verdana,arial;
+	background-color:white;
+	background-image: url("https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/40784049_2176714732617869_8022371676199059456_o.jpg?_nc_cat=0&oh=9041597f5e4efbae8267381b286d05a6&oe=5C30EDD9");
+	background-repeat: no-repeat;
+	background-size:100%
+}
+.bd {
+	
+	position:relative;
+	margin-top:0%;
+	
+}
+.deco{
+	<!--background-color:black;-->
+}
+.container {
+	margin:0 auto;
+	width:660px;
+	left:50%;	
+	
+}
+.slot-wrapper {
+	background-color:white;
+	 border: 0px solid #FFFFFF;
+	 background:url("images/bg_test2.jpg")
+}
+.slot {
+	background:url("images/reel_normal.png") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+	width:200px;
+	height:200px;
+	float:left;
+	border:10px solid #FFFFFF;
+	background-position:0 4px;
+}
+.motion {
+	background:url("images/reel_normal.png") repeat-y; 
+}
+.button {
+	
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.credits {
+	font-size:15px;
+	margin-top:20px;
+}
+.credits .browsers {
+	font-style:italic;
+	font-size:14px;
+	color:#777;
+	margin-top:4px;
+}
+.clear {
+	clear:both;
+}
+.bg{
+	position:relative;
+	margin-top:5%;
+	width:100%
+}
+.bg img{
+	width:1200px;	
+	position:relative;
+	left:10%;
+	z-index: -1;
+}
+
+.bg_top{
+	position:relative;
+}
+
+.info{
+	position:absolute;
+	left:400px;
+	top:40px;
+	font-size:150%;
+}
+
+#num{
+	font-size:150%;
+	width:20%;
+}
+.deco{
+	position:absolute;
+	top:130px;
+	left:350px;
+	z-index: 0;
+	
+}
+</style>
+<script src="jquery.min.js"></script>
+
+<script src="jquery.spritely.js"></script>
+<script src="jquery.backgroundPosition.js"></script>
+<script src="slot.js"></script>
+</head>
+
+<body>
+<!--<div class="deco"><img src="images/HipHop.gif"/></div>-->
+<div class="bg_top">
+<div class="bg">
+
+<!--<img src="images/bg.png"/>
+<img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t1.0-9/40784049_2176714732617869_8022371676199059456_o.jpg?_nc_cat=0&oh=9041597f5e4efbae8267381b286d05a6&oe=5C30EDD9"/>-->
+</div>
+</div>
+<form action="/action_page.php">
+total : <input type="text" name="FirstName" id="total_number" value="N"><br>
+<p>random from 1 to N</p>
+</form>
+<div class="bd">
+	
+
+	<div class="container">
+		<div class="slot-wrapper">
+			<div id="slot1" class="slot"></div>
+			<div id="slot2" class="slot"></div>
+			<div id="slot3" class="slot"></div>
+			<div class="clear"></div>
+		</div>		
+		<div><button class='button' id="control">Start</button></div>
+	</div>
+
+</div>
+</body>
+</html>
